@@ -17,6 +17,10 @@
 {% block javascript %}
     <script src="{{ "gitbook.js"|resolveAsset }}"></script>
     <script src="{{ "theme.js"|resolveAsset }}"></script>
+
+    <!-- Custom Scripts -->
+    <script src="//load.sumome.com/" data-sumo-site-id="7ff69c04da41ed7a0b7843260733708cfa8d3367647428d6a136a0df40684ab4" async="async"></script>
+
     {% for resource in plugins.resources.js %}
         {% if resource.url %}
         <script src="{{ resource.url }}"></script>

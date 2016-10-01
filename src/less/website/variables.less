@@ -1,9 +1,10 @@
 @staticPath: ".";
 
 // Font sizes
-@font-size-base:          14px;
-@font-size-large:         ceil(@font-size-base * 1.25); // ~18px
-@font-size-small:         ceil(@font-size-base * 0.85); // ~12px
+@font-size-base:          18px;
+@font-size-large:         ceil(@font-size-base * 1.25); // ~22px
+@font-size-small:         ceil(@font-size-base * 0.85); // ~16px
+@font-size-xsmall:        ceil(@font-size-base * 0.75); // ~14px
 @line-height-base:        1.428571429; // 20/14
 @line-height-computed:    floor(@font-size-base * @line-height-base);
 
@@ -41,12 +42,12 @@
 
 @sidebar-link-color:                  @sidebar-color;
 @sidebar-link-background:             transparent;
-@sidebar-link-hover-color:            hsl(207, 100%, 50%);
+@sidebar-link-hover-color:            hsl(201, 74%, 50%);
 @sidebar-link-hover-background:       transparent;
 @sidebar-link-padding-v:              10px;
 @sidebar-link-padding-h:              15px;
 
-@sidebar-icon-color:                  hsl(120, 60%, 50%);
+@sidebar-icon-color:                  hsl(51, 91%, 57%);
 @sidebar-link-completed:              @sidebar-link-color;
 @sidebar-link-completed-weight:       normal;
 
@@ -84,7 +85,7 @@
 // Fonts
 @font-family-serif:                   Georgia, serif;
 @font-family-sans:                    "Helvetica Neue", Helvetica, Arial, sans-serif;
-@font-family-base:                    @font-family-sans;
+@font-family-base:                    @font-family-serif;
 @headings-font-family:                inherit;
 
 @FontPath:                            '@{staticPath}/fonts';
