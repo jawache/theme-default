@@ -6,6 +6,13 @@
 
 {% block head %}
     {{ super() }}
+
+    <meta property="og:url"                content="{{ config.custom.baseURL }}/{{ file.path | contentURL | replace('./','')}}" />
+    <meta property="og:type"               content="article" />
+    <meta property="og:title"              content="{{ page.title }} · {{ config.title }}" />
+    <meta property="og:description"        content="{{ page.description }}" />
+    <meta property="og:image"              content="{{ config.custom.baseURL }}/@assets/cover.jpg" />
+
     {% if page.next and page.next.path %}
     <link rel="next" href="{{ page.next.path|resolveFile }}" />
     {% endif %}
@@ -19,7 +26,7 @@
     <script src="{{ "theme.js"|resolveAsset }}"></script>
 
     <!-- Custom Scripts -->
-    <script src="//load.sumome.com/" data-sumo-site-id="7ff69c04da41ed7a0b7843260733708cfa8d3367647428d6a136a0df40684ab4" async="async"></script>
+    <script src="//load.sumome.com/" data-sumo-site-id="e93bcf489a889d57d69aed9c7caf8dbda83cf88ed41522320d4eb2b845dde0c2" async="async"></script>
 
     {% for resource in plugins.resources.js %}
         {% if resource.url %}

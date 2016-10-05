@@ -3,10 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>{% block title %}{{ config.title|d("GitBook", true) }}{% endblock %}</title>
+        <title>{% block title %}{{ config.title }}{% endblock %}</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="{% block description %}{% endblock %}">
         <meta name="generator" content="GitBook {{ gitbook.version }}">
+        <link rel="canonical" href="{{ config.custom.baseURL }}/{{ file.path | contentURL | replace('./','')}}">
         {% if config.author %}<meta name="author" content="{{ config.author }}">{% endif %}
         {% if config.isbn %}<meta name="identifier" content="{{ config.isbn }}" scheme="ISBN">{% endif %}
         {% block style %}
@@ -19,6 +20,10 @@
             {% endfor %}
         {% endblock %}
         {% block head %}{% endblock %}
+
+
+
+
     </head>
     <body>
         {% block body %}{% endblock %}

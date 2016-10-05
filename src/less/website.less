@@ -43,9 +43,15 @@ body {
   .text-adjust(100%);
 }
 
+.book-summary {
+  font-size: @font-size-small;
+}
 
 @media only screen and (max-device-width: 320px) {
   body {
+    font-size: @font-size-xsmall;
+  }
+  .book-summary  {
     font-size: @font-size-xsmall;
   }
 }
@@ -53,5 +59,8 @@ body {
 @media only screen and (max-device-width: 480px) and (min-device-width: 320px) {
   body {
     font-size: @font-size-small;
+  }
+  .book-summary {
+    font-size: @font-size-xsmall;
   }
 }
